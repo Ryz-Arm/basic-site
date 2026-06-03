@@ -1,12 +1,12 @@
 # 🎮 Game Proxy Database System
 
-Un sistema completo di **finto database** con **proxy server** per un gioco RPG fantasy. Perfetto per testing, mockup e imparare come funzionano i sistemi di backend!
+
 
 ## 📋 Struttura del Progetto
 
 ```
 Proxy/
-├── config.json          # Configurazione con parametri finti
+├── config.json          # Configurazione con parametri 
 ├── package.json         # Dipendenze Node.js
 └── src/
     ├── index.js        # Server Express principale
