@@ -1,0 +1,24 @@
+{
+  "name": "game-proxy-db",
+  "version": "2.0.0",
+  "description": "Dragon Quest Online - Full Game Server with Real Database",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "init-db": "node src/utils/initDatabase.js"
+  },
+  "keywords": ["game", "database", "mmorpg", "sqlite"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "validator": "^13.11.0",
+    "express-session": "^1.17.3"
+  }
+}

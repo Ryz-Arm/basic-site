@@ -1,0 +1,79 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "localhost",
+    "environment": "development"
+  },
+  "database": {
+    "type": "mock-postgres",
+    "host": "db.game-servers.com",
+    "port": 5432,
+    "username": "gameadmin",
+    "password": "super_secret_password_123",
+    "database": "game_world_01",
+    "maxConnections": 100,
+    "poolSize": 20,
+    "timeout": 30000
+  },
+  "cache": {
+    "enabled": true,
+    "type": "redis",
+    "host": "cache.game-servers.com",
+    "port": 6379,
+    "ttl": 3600,
+    "maxSize": "512MB"
+  },
+  "proxy": {
+    "timeout": 5000,
+    "retries": 3,
+    "loadBalancer": "round-robin",
+    "endpoints": [
+      "https://api-1.game-servers.com",
+      "https://api-2.game-servers.com",
+      "https://api-3.game-servers.com"
+    ]
+  },
+  "game": {
+    "name": "Dragon Quest Online",
+    "version": "2.5.1",
+    "maxPlayers": 10000,
+    "worldSize": "1024x1024",
+    "respawnTime": 30,
+    "dayCycle": 1800,
+    "economyEnabled": true,
+    "pvpEnabled": false,
+    "events": {
+      "goldBoost": 1.5,
+      "expBoost": 2.0,
+      "dropRateBoost": 1.2
+    }
+  },
+  "security": {
+    "apiKey": "game-api-key-abc123xyz789",
+    "jwtSecret": "jwt-secret-key-for-auth-tokens",
+    "enableRateLimit": true,
+    "rateLimit": {
+      "requests": 1000,
+      "windowMs": 60000
+    },
+    "enableCors": true,
+    "corsOrigins": ["http://localhost:3000", "https://game.example.com"]
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "filePath": "./logs/game-server.log",
+    "maxFileSize": "100MB",
+    "maxFiles": 10
+  },
+  "features": {
+    "dungeons": true,
+    "guilds": true,
+    "marketplace": true,
+    "battlePass": true,
+    "seasonalEvents": true,
+    "crafting": true,
+    "pets": true,
+    "mountSystem": true
+  }
+}
